@@ -61,6 +61,7 @@ No modules.
 |------|-------------|
 | <a name="output_deploy_key_id"></a> [deploy\_key\_id](#output\_deploy\_key\_id) | The ID of the project deploy key |
 | <a name="output_id"></a> [id](#output\_id) | The ID of this resource |
+| <a name="output_private_key_openssh"></a> [private\_key\_openssh](#output\_private\_key\_openssh) | Private key data in OpenSSH format |
 <!-- END_TF_DOCS -->
 
 ## Authors
