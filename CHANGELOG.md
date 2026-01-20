@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v1.1.0...v1.2.0) (2026-01-20)
+
+### Features
+
+* **terraform:** Add output for private SSH key ([d7ef6fc](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/commit/d7ef6fca1940684b9493ff3563e3c36c84759728))
+
 ## [1.1.0](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v1.0.0...v1.1.0) (2025-05-20)
 
 ### Features
