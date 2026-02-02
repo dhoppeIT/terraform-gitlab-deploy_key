@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v1.2.0...v1.2.1) (2026-02-02)
+
+### Bug Fixes
+
+* **terraform:** Add missing variable ([185ad35](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/commit/185ad3522d7913301831e697c9e6e75f567d4aee))
+
 ## [1.2.0](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v1.1.0...v1.2.0) (2026-01-20)
 
 ### Features
