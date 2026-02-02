@@ -12,7 +12,7 @@ specify the required variables and run the command `terraform init`.
 ```hcl
 module "gitlab_deploy_key" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy-key/local"
-  version = "1.0.0"
+  version = "1.2.0"
 
   project = "example-group-48165/example-project"
   title   = "Example (deploy key)"
@@ -51,6 +51,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_can_push"></a> [can\_push](#input\_can\_push) | Allow this deploy key to be used to push changes to the project | `bool` | `false` | no |
+| <a name="input_expires_at"></a> [expires\_at](#input\_expires\_at) | Expiration date for the deploy key | `string` | `null` | no |
 | <a name="input_key"></a> [key](#input\_key) | The public SSH key body | `string` | `null` | no |
 | <a name="input_project"></a> [project](#input\_project) | The name or ID of the project to add the deploy key to | `string` | n/a | yes |
 | <a name="input_title"></a> [title](#input\_title) | A title to describe the deploy key with | `string` | n/a | yes |

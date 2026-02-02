@@ -19,3 +19,9 @@ variable "can_push" {
   default     = false
   description = "Allow this deploy key to be used to push changes to the project"
 }
+
+variable "expires_at" {
+  type        = string
+  default     = null
+  description = "Expiration date for the deploy key"
+}

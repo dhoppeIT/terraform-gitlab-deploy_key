@@ -3,7 +3,8 @@ resource "gitlab_deploy_key" "this" {
   project = var.project
   title   = var.title
 
-  can_push = var.can_push
+  can_push   = var.can_push
+  expires_at = var.expires_at
 }
 
 resource "tls_private_key" "this" {
