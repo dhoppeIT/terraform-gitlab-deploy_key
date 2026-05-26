@@ -23,5 +23,10 @@ variable "can_push" {
 variable "expires_at" {
   type        = string
   default     = null
-  description = "Expiration date for the deploy key"
+  description = "Expiration date for the deploy key. Expected in RFC3339 format (e.g. 2025-03-15T08:00:00Z)"
+
+  validation {
+    condition     = var.expires_at == null || can(regex("^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$", var.expires_at))
+    error_message = "The expires_at value must be in RFC3339 format (e.g. 2025-03-15T08:00:00Z)."
+  }
 }

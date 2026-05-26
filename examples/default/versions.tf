@@ -2,7 +2,7 @@ terraform {
   required_providers {
     gitlab = {
       source  = "gitlabhq/gitlab"
-      version = "~> 18.0"
+      version = "~> 19.0"
     }
 
     # tflint-ignore: terraform_unused_required_providers
@@ -12,5 +12,5 @@ terraform {
     }
   }
 
-  required_version = ">= 1.0"
+  required_version = ">= 1.6"
 }
