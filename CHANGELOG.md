@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v2.0.0...v2.1.0) (2026-07-31)
+
 ## [2.0.0](https://gitlab.com/terraform-child-modules-48151/terraform-gitlab-deploy_key/compare/v1.2.1...v2.0.0) (2026-05-26)
 
 ### ⚠ BREAKING CHANGES
