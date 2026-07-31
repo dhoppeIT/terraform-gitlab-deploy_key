@@ -10,6 +10,7 @@ resource "gitlab_deploy_key" "this" {
 resource "tls_private_key" "this" {
   count = var.key == null ? 1 : 0
 
-  algorithm   = "ECDSA"
-  ecdsa_curve = "P256"
+  algorithm   = var.algorithm
+  ecdsa_curve = var.ecdsa_curve
+  rsa_bits    = var.rsa_bits
 }

@@ -16,6 +16,9 @@ module "gitlab_deploy_key" {
 
   project = "example-group-48165/example-project"
   title   = "Example (deploy key)"
+
+  algorithm   = "ECDSA"
+  ecdsa_curve = "P256"
 }
 ```
 
@@ -50,10 +53,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 | ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_algorithm"></a> [algorithm](#input\_algorithm) | Name of the algorithm to use when generating the private key | `string` | `null` | no |
 | <a name="input_can_push"></a> [can\_push](#input\_can\_push) | Allow this deploy key to be used to push changes to the project | `bool` | `false` | no |
+| <a name="input_ecdsa_curve"></a> [ecdsa\_curve](#input\_ecdsa\_curve) | When algorithm is ECDSA, the name of the elliptic curve to use. | `string` | `"P224"` | no |
 | <a name="input_expires_at"></a> [expires\_at](#input\_expires\_at) | Expiration date for the deploy key. Expected in RFC3339 format (e.g. 2025-03-15T08:00:00Z) | `string` | `null` | no |
 | <a name="input_key"></a> [key](#input\_key) | The public SSH key body | `string` | `null` | no |
 | <a name="input_project"></a> [project](#input\_project) | The name or ID of the project to add the deploy key to | `string` | n/a | yes |
+| <a name="input_rsa_bits"></a> [rsa\_bits](#input\_rsa\_bits) | When algorithm is RSA, the size of the generated RSA key, in bits | `number` | `2048` | no |
 | <a name="input_title"></a> [title](#input\_title) | A title to describe the deploy key with | `string` | n/a | yes |
 
 ## Outputs

@@ -30,3 +30,31 @@ variable "expires_at" {
     error_message = "The expires_at value must be in RFC3339 format (e.g. 2025-03-15T08:00:00Z)."
   }
 }
+
+variable "algorithm" {
+  type        = string
+  default     = null
+  description = "Name of the algorithm to use when generating the private key"
+
+  validation {
+    condition     = var.algorithm == null || contains(["RSA", "ECDSA", "ED25519"], var.algorithm)
+    error_message = "Valid values are RSA, ECDSA, ED25519"
+  }
+}
+
+variable "ecdsa_curve" {
+  type        = string
+  default     = "P224"
+  description = "When algorithm is ECDSA, the name of the elliptic curve to use."
+
+  validation {
+    condition     = contains(["P224", "P256", "P384", "P521"], var.ecdsa_curve)
+    error_message = "Valid values are P224, P256, P384, P521"
+  }
+}
+
+variable "rsa_bits" {
+  type        = number
+  default     = 2048
+  description = "When algorithm is RSA, the size of the generated RSA key, in bits"
+}
